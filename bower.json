@@ -1,0 +1,12 @@
+{
+  "name": "lexi express",
+  "version": "0.0.0",
+  "dependencies": {
+    "jquery": "2.0.3",
+    "lodash": "~2.4.1",
+    "foundation": "~5.2.0"
+  },
+  "resolutions": {
+    "jquery": "2.0.3"
+  }
+}
