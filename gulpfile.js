@@ -34,7 +34,8 @@ gulp.task('scripts-client', function() {
 gulp.task('server', function(){
   nodemon({
     script: 'app.js',
-    ext: 'js hbs scss'
+    ext: 'js hbs scss',
+    ignore: ['node_modules/**', '.git/**', 'app/bower_components/**']
   })
   .on('change', ['build'])
   .on('restart', function () {
