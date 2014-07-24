@@ -2,71 +2,60 @@ var express = require('express'),
     exphbs  = require('express3-handlebars'),
     app = express(),
     q = require('q'),
-    lexi = require('./lexi'),
-    config = require('./app/config');
+    _ = require('lodash'),
 
-//    helpers = require('./app/scripts_server/helpers'),
-    // mongoose = require('mongoose'),
-    // passport = require("passport"),
-    // local_strategy = require('passport-local').Strategy,
+    helpers = require('./app/helpers'),
+    config = require('./app/config'),
+
+    mongoose = require('mongoose'),
+    bcrypt = require('bcrypt');
 
 
 var hbs = exphbs.create({
-    defaultLayout: 'base',
-    extname: '.hbs',
-//        helpers      : helpers,
-    partialsDir: [
-        'app/templates/_partials/'
-    ],
-    layoutsDir: 'app/templates/_layouts/'
+  defaultLayout: 'base',
+  extname: '.hbs',
+  helpers: helpers,
+  partialsDir: ['app/templates/_partials/'],
+  layoutsDir: 'app/templates/_layouts/'
 });
+
 
 app.engine('hbs', hbs.engine);
 app.set('view engine', 'hbs');
 app.set('views', './app/templates');
+
+app.use(express.cookieParser('LEXISECRET666'));
+app.use(express.bodyParser({ keepExtensions: true, uploadDir: './tmp' }));
+app.use(express.session({ secret: 'LEXISECRET666' }));
+
 app.use("/compiled", express.static(__dirname + "/app/compiled"));
 app.use("/bower_components", express.static(__dirname + "/app/bower_components"));
 app.use("/images", express.static(__dirname + "/app/images"));
+app.use("/favicon.ico", express.static(__dirname + "/app/images/favicon.ico"));
+app.use("/uploads", express.static(__dirname + "/app/uploads"));
 app.use("/fonts", express.static(__dirname + "/app/fonts"));
 app.use("/styles", express.static(__dirname + "/app/styles"));
 app.use("/scripts_client", express.static(__dirname + "/app/scripts_client"));
 
 
-////////////////////////////////////////////////////////////////////////////
-
-// fixit separate env/prod configs
-
-// if (config.db){
-//     mongoose.connect(config.db);
-//     var db = mongoose.connection;
-//     db.on('error', console.error.bind(console, 'connection error:'));
-// }
-
-app.use(express.cookieParser());
-app.use(express.json());
-app.use(express.urlencoded());
-app.use(express.session({ secret: 'LEXISECRET666' }));
-// app.use(passport.initialize());
-// app.use(passport.session());
-
-var $ = {
-    app: app,
-    q: q,
-    lexi: lexi,
-    config: config
-//    db: db,
-//    mongoose: mongoose,
-};
-
-
-////////////////////////////////////////////////////////////////////////////
-
-require('./app/compiled/scripts-server.js')(app, $);
-
-app.get('*', function(req, res){
-    res.status(404).render('404');
+require('./app/compiled/scripts-server.js')(app, {
+  config: config,
+  q: q,
+  _:_,
+  mongoose: mongoose,
+  bcrypt: bcrypt
 });
 
-app.listen(3000);
 
-console.log('♥ http://localhost:3000');
+app.get('*', function(req, res){
+    res.status(404).render('404', {
+    title: '404 not found',
+    global: {
+      auth_token: req.cookies.auth_token,
+      year: new Date().getFullYear()
+      }
+    } );
+});
+
+app.listen(3001);
+console.log('♥ http://localhost:3001');

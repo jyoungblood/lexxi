@@ -1,4 +1,8 @@
 module.exports = {
-
-//    db: "mongodb://localhost/letsfarm"
+  // db : {
+  //   name: "",
+  //   host: "",
+  //   password: "",
+  //   username: ""
+  // },
 }

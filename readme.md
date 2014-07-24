@@ -1,1 +1,9 @@
-boilerplate for developing good ol' fashioned web things with lexi and express
+## LEXI
+### Fluffer code and helpers for quickly developing internet projects with a relatively standard express.js stack.
+
+Clone this repo, and then...
+```bash
+npm install
+bower install
+gulp dev
+```
