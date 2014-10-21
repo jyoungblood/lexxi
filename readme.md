@@ -2,7 +2,7 @@
 
 LEXXI is abstraction layer for quickly developing internet projects with a relatively standard expressjs stack.
 
-we're working on the documentation, but this should be enough to get you started:
+the documentation will be available soon, but this should be enough to get you started:
 
 ```bash
 mkdir cool-new-project && cd $_
