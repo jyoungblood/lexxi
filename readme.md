@@ -1,5 +1,7 @@
 ## LEXXI 0.0.2
 
+(っ◕‿◕)っ♥
+
 LEXXI is an abstraction layer for quickly developing internet projects with a relatively standard expressjs stack.
 
 the documentation will be available soon, but if you're curious, this should be enough to get you started:
@@ -23,8 +25,10 @@ bower install
 gulp dev
 ```
 
+this series of incantations will produce a reasonably-assembled express app that (obviously) uses gulp to handle tedious parts of the development process. [take a look at the tree structure](https://github.com/hxgf/lexxi/tree/master/boilerplate) and it will seem pretty obvious where [all your application code goes](https://github.com/hxgf/lexxi/tree/master/boilerplate/app). 
 
+you can then point your internet browser to http://localhost:3001. if all went well, you'll see our friend from the top of this readme file reaching out to hug a floating heart (or perhaps the concept of love itself?).
 
-this series of incantations will produce a reasonable express app that (obviously) uses gulp to handle tedious parts of the dev process. take a look at the tree structure and it will seem pretty obvious where all your application code goes.
+i promise i'll tell you more about this system when the time is right, but now is not that time. 
 
-i promise i'll tell you more about this system when the time is right. now is not that time. don't panic. ssshhhh.
+don't panic. ssshhhh. it will all be alright.
