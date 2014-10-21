@@ -1,4 +1,4 @@
-## LEXXI v0.0.2
+## LEXXI 0.0.2
 
 LEXXI is abstraction layer for quickly developing internet projects with a relatively standard expressjs stack.
 
