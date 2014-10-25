@@ -25,10 +25,10 @@ bower install
 gulp dev
 ```
 
-this series of incantations will produce a reasonably-assembled express app that (obviously) uses gulp to handle tedious parts of the development process. [take a look at the tree structure](https://github.com/hxgf/lexxi/tree/master/boilerplate) and it will seem pretty obvious where [all your application code goes](https://github.com/hxgf/lexxi/tree/master/boilerplate/app). 
+this series of incantations will produce a reasonably-assembled express app that (obviously) uses gulp to handle tedious parts of the development process. [take a look at the tree structure](https://github.com/hxgf/lexxi/tree/master/boilerplate) and it will seem pretty obvious where [all your application code goes](https://github.com/hxgf/lexxi/tree/master/boilerplate/app).
 
 you can then point your internet browser to http://localhost:3001, where, if all went well, you'll see our friend (っ◕‿◕)っ reaching out to hug a floating heart ♥ (or perhaps the concept of love itself?).
 
-i promise i'll tell you more about this system when the time is right, but now is not that time. 
+i promise i'll tell you more about this system when the time is right, but now is not that time.
 
-soon, my children. ssshhhh.
+soon, my children, all will be revealed. ssshhhh.
