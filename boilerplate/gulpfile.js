@@ -3,13 +3,19 @@ var gulp = require('gulp'),
     nodemon = require('gulp-nodemon'),
     concat = require('gulp-concat'),
     sass = require('gulp-sass'),
-    wrapper = require('gulp-wrapper');
+    wrapper = require('gulp-wrapper'),
+    neat = require('node-neat').includePaths;
+
+
+var paths = {
+    scss: './app/styles/*.scss'
+};
 
 
 gulp.task('styles', function () {
-  gulp.src('app/styles/app.scss')
-    .pipe(sass({includePaths: ['app/styles']}))
-    .pipe(gulp.dest('app/compiled'));
+  gulp.src(paths.scss)
+    .pipe(sass({includePaths: ['app/styles'].concat(neat)}))
+    .pipe(gulp.dest('./app/compiled'));
 });
 
 
@@ -43,17 +49,6 @@ gulp.task('server', function(){
 });
 
 
-
-
-// fixit livereload
-  // open the browser window after the server has started
-
-// fixit build-optimize
-  // package to 'dist' folder
-    // minify
-    // uglify
-    // imagemin
-    // copy everything else
 
 
 gulp.task('build', ['styles', 'scripts-server', 'scripts-client']);

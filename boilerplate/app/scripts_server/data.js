@@ -1,12 +1,14 @@
-// UNCOMMENT TO ENABLE MONGOOSE
-//
-// var schemas = {},
-//     models = {};
-//
-// $.mongoose.connect('mongodb://'+$.config.db.username+':'+$.config.db.password+'@'+$.config.db.host+'/'+$.config.db.name);
-//
-// var db = $.mongoose.connection;
-// db.on('error', console.error.bind(console, 'connection error:'));
+
+if ($.config.db){
+  var schemas = {},
+      models = {};
+
+  $.mongoose.connect('mongodb://'+$.config.db.username+':'+$.config.db.password+'@'+$.config.db.host+'/'+$.config.db.name);
+
+  var db = $.mongoose.connection;
+  db.on('error', console.error.bind(console, 'connection error:'));
+}
+
 
 
 
