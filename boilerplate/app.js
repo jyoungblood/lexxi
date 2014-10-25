@@ -3,12 +3,13 @@ var express = require('express'),
     app = express(),
     q = require('q'),
     _ = require('lodash'),
-
+    // mongoose = require('mongoose'),
     helpers = require('./app/helpers'),
-    config = require('./app/config'),
+    config = require('./app/config');
 
-    mongoose = require('mongoose'),
-    bcrypt = require('bcrypt');
+
+
+
 
 
 var hbs = exphbs.create({
@@ -24,9 +25,9 @@ app.engine('hbs', hbs.engine);
 app.set('view engine', 'hbs');
 app.set('views', './app/templates');
 
-app.use(express.cookieParser('LEXISECRET666'));
+app.use(express.cookieParser('LEXXISECRET666'));
 app.use(express.bodyParser({ keepExtensions: true, uploadDir: './tmp' }));
-app.use(express.session({ secret: 'LEXISECRET666' }));
+app.use(express.session({ secret: 'LEXXISECRET666' }));
 
 app.use("/compiled", express.static(__dirname + "/app/compiled"));
 app.use("/bower_components", express.static(__dirname + "/app/bower_components"));
@@ -42,8 +43,7 @@ require('./app/compiled/scripts-server.js')(app, {
   config: config,
   q: q,
   _:_,
-  mongoose: mongoose,
-  bcrypt: bcrypt
+  // mongoose: mongoose
 });
 
 

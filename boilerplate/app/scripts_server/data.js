@@ -1,3 +1,4 @@
+// UNCOMMENT TO ENABLE MONGOOSE
 //
 // var schemas = {},
 //     models = {};
@@ -6,8 +7,12 @@
 //
 // var db = $.mongoose.connection;
 // db.on('error', console.error.bind(console, 'connection error:'));
-//
-//
+
+
+
+
+// EXAMPLE SETUP
+
 // schemas.user = {
 //   screenname: String,
 //   password: String,
@@ -29,24 +34,19 @@
 //     original: { type: String, default: '/images/avatar-default-o.png' }
 //   }
 // };
-//
-//
-// schemas.message = {
-//   site_code: String,
-//   body: String,
-//   excerpt: String,
-//   date_sent: { type: Date, default: Date.now },
-//   date_read: Date,
-//   user_id_sender: String,
-//   user_id_recipient: String
-// };
-//
-//
-//
-//
-//
-// var schema_user = new $.mongoose.Schema(schemas.user),
-//     schema_message = new $.mongoose.Schema(schemas.message);
-//
+
+// var schema_user = new $.mongoose.Schema(schemas.user);
 // models.user = $.mongoose.model('users', schema_user);
-// models.message = $.mongoose.model('messages', schema_message);
+
+
+// EXAMPLE USAGE
+
+// app.get('/user/:_id', function (req, res) {
+//   models.user.findOne({ id: req.params._id }).exec(function(err, data){
+//   if (err) return handleError(err);
+//     res.render('stallion-detail', {
+//         title: 'Edit User',
+//         data: data
+//     });
+//   });
+// });
