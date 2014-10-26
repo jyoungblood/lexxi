@@ -4,11 +4,7 @@ var express = require('express'),
     q = require('q'),
     _ = require('lodash'),
 
-// fixit organize
-  // lexi utils
-    // handlebars helpers
-    // server script functions
-    utils = require('./app/lexxi-utils'), // fixit utils handlebars npm
+    lexxi = require('lexxi'),
 
     helpers_custom = require('./app/helpers'),
     config = require('./app/config');
@@ -18,22 +14,11 @@ if (config.db){
 }
 
 
-// fixit move to utils
-function extend(target) {
-  var sources = [].slice.call(arguments, 1);
-  sources.forEach(function (source) {
-    for (var prop in source) {
-      target[prop] = source[prop];
-    }
-  });
-  return target;
-}
-
 
 var hbs = exphbs.create({
   defaultLayout: 'base',
   extname: '.hbs',
-  helpers: extend({}, utils, helpers_custom),
+  helpers: lexxi.utilities.extend({}, lexxi.handlebars, helpers_custom),
   partialsDir: ['app/templates/_partials/'],
   layoutsDir: 'app/templates/_layouts/'
 });
@@ -44,7 +29,10 @@ app.set('view engine', 'hbs');
 app.set('views', './app/templates');
 
 app.use(express.cookieParser('LEXXISECRET666'));
+
+
 app.use(express.bodyParser({ keepExtensions: true, uploadDir: './tmp' }));
+
 app.use(express.session({ secret: 'LEXXISECRET666' }));
 
 app.use("/compiled", express.static(__dirname + "/app/compiled"));
@@ -60,7 +48,8 @@ app.use("/scripts_client", express.static(__dirname + "/app/scripts_client"));
 var bootstrap = {
   config: config,
   q: q,
-  _:_
+  _:_,
+  lexxi: lexxi.utilities
 };
 
 if (config.db){
@@ -80,5 +69,5 @@ app.get('*', function(req, res){
     } );
 });
 
-app.listen(3001);
-console.log('♥ http://localhost:3001');
+app.listen(config.port);
+console.log('♥♥ http://localhost:'+config.port+' ♥♥');
