@@ -45,7 +45,7 @@ if ($.config.db){
 
 // app.get('/user/:_id', function (req, res) {
 //   models.user.findOne({ id: req.params._id }).exec(function(err, data){
-//   if (err) return handleError(err);
+//   if (err) return $.lexxi.handle_error(err);
 //     res.render('stallion-detail', {
 //         title: 'Edit User',
 //         data: data

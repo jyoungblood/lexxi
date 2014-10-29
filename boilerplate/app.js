@@ -18,7 +18,7 @@ if (config.db){
 var hbs = exphbs.create({
   defaultLayout: 'base',
   extname: '.hbs',
-  helpers: lexxi.utilities.extend({}, lexxi.handlebars, helpers_custom),
+  helpers: lexxi.extend({}, lexxi, helpers_custom),
   partialsDir: ['app/templates/_partials/'],
   layoutsDir: 'app/templates/_layouts/'
 });
@@ -49,7 +49,7 @@ var bootstrap = {
   config: config,
   q: q,
   _:_,
-  lexxi: lexxi.utilities
+  lexxi: lexxi
 };
 
 if (config.db){
