@@ -19,8 +19,8 @@ var hbs = exphbs.create({
   defaultLayout: 'base',
   extname: '.hbs',
   helpers: lexxi.extend({}, lexxi, helpers_custom),
-  partialsDir: [__dirname + 'app/templates/_partials/'],
-  layoutsDir: __dirname + 'app/templates/_layouts/'
+  partialsDir: [__dirname + '/app/templates/_partials/'],
+  layoutsDir: __dirname + '/app/templates/_layouts/'
 });
 
 
