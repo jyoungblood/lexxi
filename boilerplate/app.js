@@ -6,8 +6,8 @@ var express = require('express'),
 
     lexxi = require('lexxi'),
 
-    helpers_custom = require('./app/helpers'),
-    config = require('./app/config');
+    helpers_custom = require(__dirname + '/app/helpers'),
+    config = require(__dirname + '/app/config');
 
 if (config.db){
   var mongoose = require('mongoose');
@@ -19,19 +19,19 @@ var hbs = exphbs.create({
   defaultLayout: 'base',
   extname: '.hbs',
   helpers: lexxi.extend({}, lexxi, helpers_custom),
-  partialsDir: ['app/templates/_partials/'],
-  layoutsDir: 'app/templates/_layouts/'
+  partialsDir: [__dirname + 'app/templates/_partials/'],
+  layoutsDir: __dirname + 'app/templates/_layouts/'
 });
 
 
 app.engine('hbs', hbs.engine);
 app.set('view engine', 'hbs');
-app.set('views', './app/templates');
+app.set('views', __dirname + '/app/templates');
 
 app.use(express.cookieParser('LEXXISECRET666'));
 
 
-app.use(express.bodyParser({ keepExtensions: true, uploadDir: './tmp' }));
+app.use(express.bodyParser({ keepExtensions: true, uploadDir: __dirname + '/tmp' }));
 
 app.use(express.session({ secret: 'LEXXISECRET666' }));
 
@@ -56,7 +56,7 @@ if (config.db){
   bootstrap.mongoose = mongoose;
 }
 
-require('./app/compiled/scripts-server.js')(app, bootstrap);
+require(__dirname + '/app/compiled/scripts-server.js')(app, bootstrap);
 
 
 app.get('*', function(req, res){

@@ -1,3 +1,7 @@
+## 0.2.1
+- robust relative path resolution
+- require lexxi lib in package.json
+
 ## 0.2.0
 - build css w/ bourbon/neat
 - handle data w/ mongoose if db config param set
