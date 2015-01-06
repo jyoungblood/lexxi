@@ -1,3 +1,6 @@
+## 0.2.2
+- add missing slashes (i am so sorry)
+
 ## 0.2.1
 - robust relative path resolution
 - require lexxi lib in package.json

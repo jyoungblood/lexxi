@@ -1,6 +1,6 @@
 {
   "name": "",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "",
   "author": "",
   "dependencies": {
@@ -10,7 +10,7 @@
     "lodash": "^2.4.1",
     "express": "^3.5.0",
     "mongoose": "^3.8.12",
-    "lexxi": "^0.2.1"
+    "lexxi": "^0.2.2"
   },
   "devDependencies": {
     "gulp": "^3.5.5",
