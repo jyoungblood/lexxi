@@ -1,3 +1,4 @@
+"use strict";
 var express = require('express'),
     exphbs  = require('express-handlebars'),
     app = express(),
@@ -63,7 +64,8 @@ var bootstrap = {
   config: config,
   q: q,
   _:_,
-  lexxi: lexxi
+  lexxi: lexxi,
+  __base: __dirname + '/'
 };
 
 if (config.db){

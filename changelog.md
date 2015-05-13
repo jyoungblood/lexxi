@@ -1,3 +1,10 @@
+## 0.3.1
+- include __base variable (equivalent of __dirname)
+- remove $.lexxi.global_construct()
+- nl2br handlebars function that works
+- use strict
+- suppress npm package.json warnings ("no description", "no readme", "no repository field")
+
 ## 0.3.0
 - update dependency modules with most recent stable versions
 - add npm-shrinkwrap

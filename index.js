@@ -19,18 +19,6 @@ module.exports = {
     return Object.prototype.toString.call(value) === '[object Array]';
   },
 
-  // exposes useful user-specific request objects to scripts_server scripts
-  global_construct : function(req, $) {
-    var config = require('../config')(req);
-    return {
-      auth_token: req.cookies.auth_token,
-      admin_token: req.cookies.admin_token,
-      year: new Date().getFullYear(),
-      // uhh pattern-specific stuff ??
-        // profile_url: req.cookies.profile_url,
-        // unread_count: req.cookies.unread_count, // total number of unread messages where i am not the author
-    };
-  },
 
   // returns a date a given number of days from a given date
   future_days: function (theDate, days) {
@@ -154,7 +142,7 @@ module.exports = {
   // transform line breaks to "<br />"
   nl2br: function (text){
     var nl2br = (text + '').replace(/([^>\r\n]?)(\r\n|\n\r|\r|\n)/g, '$1' + '<br />' + '$2');
-    return new handlebars.SafeString(nl2br);
+    return nl2br;
   },
 
   // return true(/false) if this item is(/is not) in the array

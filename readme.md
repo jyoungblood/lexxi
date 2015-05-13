@@ -1,4 +1,4 @@
-## LEXXI 0.3.0
+## LEXXI 0.3.1
 
 (っ◕‿◕)っ♥
 
@@ -19,38 +19,37 @@ Read the full documentation here: [http://hxgf.github.io/lexxi/](http://hxgf.git
 
 ## Quick Start Guide
 
-Make a directory for your new project and enter it.
+Make a directory for your new project and enter it:
 ```bash
 mkdir cool-new-project && cd $_
 ```
 
-Install LEXXI
+Install LEXXI:
 ```bash
 npm install lexxi
 ```
 
-Copy the boilerplate
+Initialize your application by copying the boilerplate:
 ```bash
 cp -R node_modules/lexxi/boilerplate/. . && mv .npmignore .gitignore
 ```
 
-Install all the modules
+Install all the modules:
 ```bash
 npm install
 ```
 
-Install the client libraries *(optional, but helpful in many cases)*
+Install the client dependencies if you want *(optional, but helpful in many cases)*:
 ```bash
 bower install
 ```
 
-This series of incantations will produce a reasonably-assembled express app that uses gulp to handle tedious parts of the development process. [Take a look at the tree structure](https://github.com/hxgf/lexxi/tree/master/boilerplate) and it will seem pretty obvious where [all your application code goes](https://github.com/hxgf/lexxi/tree/master/boilerplate/app).
+This series of incantations will produce a reasonably-assembled express app that uses gulp to handle various tedious parts of the development process. [Take a look at the tree structure](https://github.com/hxgf/lexxi/tree/master/boilerplate) and it will seem pretty obvious where [all your application code lives](https://github.com/hxgf/lexxi/tree/master/boilerplate/app).
 
 
-At this point, everything should be good to go. Let's fire this baby up:
+At this point, everything should be good to go...let's fire it up:
 ```bash
 gulp dev
 ```
 
-You can then point your favorite internet browser to http://localhost:3001, where, if all went well, you'll see our friend (っ◕‿◕)っ reaching out to hug a floating heart ♥ *(or perhaps the concept of love itself?)*.
-
+You can now point your favorite internet browser to http://localhost:3001, where, if all went well, you'll see our friend (っ◕‿◕)っ reaching out for love in a world of darkness ♥
