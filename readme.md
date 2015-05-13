@@ -13,7 +13,7 @@ mkdir cool-new-project && cd $_
 npm install lexxi
 ```
 ```bash
-cp -R node_modules/lexxi/boilerplate/* .
+cp -R node_modules/lexxi/boilerplate/. . && mv .npmignore .gitignore
 ```
 ```bash
 npm install

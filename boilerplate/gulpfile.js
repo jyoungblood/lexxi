@@ -3,8 +3,7 @@ var gulp = require('gulp'),
     nodemon = require('gulp-nodemon'),
     concat = require('gulp-concat'),
     sass = require('gulp-sass'),
-    wrapper = require('gulp-wrapper'),
-    neat = require('node-neat').includePaths;
+    wrapper = require('gulp-wrapper');
 
 
 var paths = {
@@ -14,7 +13,7 @@ var paths = {
 
 gulp.task('styles', function () {
   gulp.src(paths.scss)
-    .pipe(sass({includePaths: ['app/styles'].concat(neat)}))
+    .pipe(sass({includePaths: ['app/styles'].concat()}))
     .pipe(gulp.dest('./app/compiled'));
 });
 

@@ -1,5 +1,5 @@
 var express = require('express'),
-    exphbs  = require('express3-handlebars'),
+    exphbs  = require('express-handlebars'),
     app = express(),
     q = require('q'),
     _ = require('lodash'),
@@ -7,7 +7,11 @@ var express = require('express'),
     lexxi = require('lexxi'),
 
     helpers_custom = require(__dirname + '/app/helpers'),
-    config = require(__dirname + '/app/config');
+    config = require(__dirname + '/app/config'),
+    cookieParser = require('cookie-parser'),
+    bodyParser = require('body-parser'),
+    session = require('express-session'),
+    multer  = require('multer');
 
 if (config.db){
   var mongoose = require('mongoose');
@@ -28,12 +32,22 @@ app.engine('hbs', hbs.engine);
 app.set('view engine', 'hbs');
 app.set('views', __dirname + '/app/templates');
 
-app.use(express.cookieParser('LEXXISECRET666'));
+app.use(cookieParser('LEXXISECRET666'));
 
 
-app.use(express.bodyParser({ keepExtensions: true, uploadDir: __dirname + '/tmp' }));
+app.use(multer({ dest: __dirname + '/tmp' }));
 
-app.use(express.session({ secret: 'LEXXISECRET666' }));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({
+  extended: true
+}));
+
+
+app.use(session({ 
+  secret: 'LEXXISECRET666',
+  resave: false,
+  saveUninitialized: false
+}));
 
 app.use("/compiled", express.static(__dirname + "/app/compiled"));
 app.use("/bower_components", express.static(__dirname + "/app/bower_components"));

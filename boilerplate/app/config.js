@@ -14,6 +14,7 @@ module.exports = {
   // s3_key: '',
   // s3_secret: '',
   // s3_bucket: '',
+  // mandrill_key: '',
   // stripe_key: '',
   // google_ua: '',
 }
