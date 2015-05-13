@@ -1,6 +1,6 @@
 {
   "name": "",
-  "version": "0.2.2",
+  "version": "0.3.0",
   "description": "",
   "author": "",
   "engines": {
@@ -13,7 +13,7 @@
     "express": "^4.12.3",
     "express-handlebars": "^2.0.1",
     "express-session": "^1.11.2",
-    "lexxi": "^0.2.2",
+    "lexxi": "^0.3.0",
     "lodash": "^3.8.0",
     "mongoose": "^4.0.2",
     "multer": "^0.1.8",

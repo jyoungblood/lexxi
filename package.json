@@ -1,8 +1,8 @@
 {
   "name": "lexxi",
-  "description": "Abstraction layer for quickly developing web projects with a relatively standard Express stack.",
+  "description": "Abstraction layer for quickly developing internet projects with Express (and friends)",
   "author": "hxgf (http://hexgirlfriend.com)",
-  "version": "0.2.2",
+  "version": "0.3.0",
   "main": "index.js",
   "repository": {
     "type": "git",

@@ -1,3 +1,12 @@
+## 0.3.0
+- update dependency modules with most recent stable versions
+- add npm-shrinkwrap
+- add actual license file
+- don't include bourbon and neat by default
+- add mandrill default api key config option	
+- scripts-server includes global_construct() option (required for upcoming patterns)
+- update readme quick start incantation to copy all the boilerplate files (include .bowerrc and .gitignore)
+
 ## 0.2.2
 - add missing slashes (i am so sorry)
 
