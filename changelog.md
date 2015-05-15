@@ -1,3 +1,6 @@
+## 0.3.2
+- fix gulpfile to build on file change again (wtf nodemon)
+
 ## 0.3.1
 - include __base variable (equivalent of __dirname)
 - remove $.lexxi.global_construct()

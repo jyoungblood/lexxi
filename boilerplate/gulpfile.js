@@ -42,8 +42,8 @@ gulp.task('server', function(){
     ext: 'js hbs scss',
     ignore: ['node_modules/**', '.git/**', 'app/bower_components/**']
   })
-  .on('change', ['build'])
   .on('restart', function () {
+    gulp.run('build');
   });
 });
 

@@ -536,9 +536,9 @@
       }
     },
     "lexxi": {
-      "version": "0.3.1",
+      "version": "0.3.2",
       "from": "lexxi@",
-      "resolved": "https://registry.npmjs.org/lexxi/-/lexxi-0.3.1.tgz"
+      "resolved": "https://registry.npmjs.org/lexxi/-/lexxi-0.3.2.tgz"
     },
     "lodash": {
       "version": "3.8.0",
