@@ -20,11 +20,14 @@ Included by default:
 - [nodemailer](https://nodemailer.com/)
 - [tachyons](http://tachyons.io/)
 
+
 LEXXI also introduces boilerplate, lightweight build scripts, error handling, application logging, lightweight authentication middleware, and a flexible application structure that can be organized in a variety of ways.
 
-Read the full documentation here: [http://lexxi.hexgirlfriend.com](lexxi.hexgirlfriend.com)
+Read the full documentation here: [http://lexxi.hexgirlfriend.com](http://lexxi.hexgirlfriend.com)
+
 
 We're working on a Yeoman generator to make the setup process as frictionless as possible, but in the mean time, you can set it up like this:
+
 
 ## Manual Installation
 
@@ -54,4 +57,4 @@ You can now point your favorite internet browser to http://localhost:3001, where
 
 After this, it's just like developing a regular ol' Express app...just put all your Express code (routers, middleware, helpers) somewhere in app/controllers (organized however you want) and it will be assembled into a functional application.
 
-Again, read the full documentation here: [http://lexxi.hexgirlfriend.com](lexxi.hexgirlfriend.com)
+Again, read the full documentation here: [http://lexxi.hexgirlfriend.com](http://lexxi.hexgirlfriend.com)
