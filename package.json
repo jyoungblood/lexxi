@@ -42,15 +42,30 @@
     "request": "2.79.0",
     "voca": "1.1.0"
   },
+  "devDependencies": {
+    "nodemon": "1.11.0",
+    "onchange": "3.2.1",
+    "parallelshell": "2.0.0"
+  },
   "author": "HXGF <static@hexgirlfriend.com> (http://hexgirlfriend.com/)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/hxgf/lexxi/issues"
   },
-  "homepage": "https://github.com/hxgf/lexxi",
-  "devDependencies": {
-    "nodemon": "1.11.0",
-    "onchange": "3.2.1",
-    "parallelshell": "2.0.0"
-  }
+  "homepage": "http://lexxi.hexgirlfriend.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hxgf/lexxi.git"
+  },
+  "keywords": [
+    "boilerplate"
+    "web-framework",
+    "express",
+    "boilerplate",
+    "handlebars",
+    "mongoose",
+    "REST",
+    "API"
+   ]
+
 }
