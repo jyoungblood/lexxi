@@ -5,13 +5,22 @@
 LEXXI is an abstraction layer *(toolkit? meta-framework?)* for quickly developing internet projects with a relatively straightforward express stack. It ties together some technologies you might choose for building a web application and then gets out of your way so you can make the magic happen.
 
 Included by default:
-- [express](http://expressjs.com/) (w/ [handlebars](http://handlebarsjs.com/))
+- [express](http://expressjs.com/) (configured with [handlebars](http://handlebarsjs.com/) and significant amount of sensible defaults)
 - [mongoose](http://mongoosejs.com/)
 - [q](https://github.com/kriskowal/q)
 - [lodash](https://lodash.com/)
-[more]
+- [bcrypt-nodejs](https://www.npmjs.com/package/bcrypt-nodejs)
+- [request](https://github.com/request/request)
+- [moment](http://momentjs.com/)
+- [math](http://mathjs.org/)
+- [mime](https://github.com/broofa/node-mime)
+- [gm](http://aheckmann.github.io/gm/)
+- [voca](https://vocajs.com/)
+- [knox](https://github.com/Automattic/knox)
+- [nodemailer](https://nodemailer.com/)
+- [tachyons](http://tachyons.io/)
 
-LEXXI also introduces boilerplate, lightweight build scripts, and a flexible application structure that can be organized in a variety of ways.
+LEXXI also introduces boilerplate, lightweight build scripts, error handling, application logging, lightweight authentication middleware, and a flexible application structure that can be organized in a variety of ways.
 
 Read the full documentation here: [http://lexxi.hexgirlfriend.com](lexxi.hexgirlfriend.com)
 

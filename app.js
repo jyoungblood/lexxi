@@ -14,7 +14,7 @@ var express = require('express'),
     compression = require('compression'),
     errorhandler = require('errorhandler'),
     morgan = require('morgan'),
-    file_stream_rotator =require('file-stream-rotator'),
+    file_stream_rotator = require('file-stream-rotator'),
 
     settings = require(__dirname + '/app/settings'),
     fs = require('fs'),
