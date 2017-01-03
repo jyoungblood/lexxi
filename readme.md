@@ -31,22 +31,22 @@ We're working on a Yeoman generator to make the setup process as frictionless as
 
 ## Manual Installation
 
-1. Clone this repo into your (blank) project directory
+1\. Clone this repo into your (blank) project directory
 ```bash
 git clone https://github.com/hxgf/lexxi.git .
 ```
 
-2. Disconnect your project from this repo
+2\. Disconnect your project from this repo
 ```bash
 rm -Rf .git
 ```
 
-3. Install all the dependencies
+3\. Install all the dependencies
 ```bash
 npm install
 ```
 
-4. Start it up
+4\. Start it up
 ```bash
 npm run dev
 ```
