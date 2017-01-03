@@ -26,9 +26,6 @@ LEXXI also introduces boilerplate, lightweight build scripts, error handling, ap
 Read the full documentation here: [http://lexxi.hexgirlfriend.com](http://lexxi.hexgirlfriend.com)
 
 
-We're working on a Yeoman generator to make the setup process as frictionless as possible, but in the mean time, you can set it up like this:
-
-
 ## Install with [Yeoman](http://yeoman.io/) *(recommended)*
 
 1\. Install the Yeoman CLI *(if you haven't already)*
@@ -53,11 +50,7 @@ npm run dev
 
 You can now point your favorite internet browser to http://localhost:3001, where, if all went well, you'll see our friend (っ◕‿◕)っ reaching out for love in a world of darkness ♥
 
---------------------------------------------------
-
-After this, it's just like developing a regular ol' Express app...just put all your Express code (routers, middleware, helpers) somewhere in app/controllers (organized however you want) and it will be assembled into a functional application.
-
-Again, read the full documentation here: [http://lexxi.hexgirlfriend.com](http://lexxi.hexgirlfriend.com)
+You are now free to develop your application as you see fit. Again, refer to the [LEXXI documentation](http://lexxi.hexgirlfriend.com) for more information about developing with this set of tools.
 
 --------------------------------------------------
 
