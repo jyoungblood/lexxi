@@ -46,7 +46,20 @@ npm install -g generator-lexxi
 yo lexxi
 ```
 
+4\. Start it up
+```bash
+npm run dev
+```
 
+You can now point your favorite internet browser to http://localhost:3001, where, if all went well, you'll see our friend (っ◕‿◕)っ reaching out for love in a world of darkness ♥
+
+--------------------------------------------------
+
+After this, it's just like developing a regular ol' Express app...just put all your Express code (routers, middleware, helpers) somewhere in app/controllers (organized however you want) and it will be assembled into a functional application.
+
+Again, read the full documentation here: [http://lexxi.hexgirlfriend.com](http://lexxi.hexgirlfriend.com)
+
+--------------------------------------------------
 
 ## Manual Installation
 
@@ -69,11 +82,3 @@ npm install
 ```bash
 npm run dev
 ```
-
-You can now point your favorite internet browser to http://localhost:3001, where, if all went well, you'll see our friend (っ◕‿◕)っ reaching out for love in a world of darkness ♥
-
---------------------------------------------------
-
-After this, it's just like developing a regular ol' Express app...just put all your Express code (routers, middleware, helpers) somewhere in app/controllers (organized however you want) and it will be assembled into a functional application.
-
-Again, read the full documentation here: [http://lexxi.hexgirlfriend.com](http://lexxi.hexgirlfriend.com)
