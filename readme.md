@@ -29,6 +29,25 @@ Read the full documentation here: [http://lexxi.hexgirlfriend.com](http://lexxi.
 We're working on a Yeoman generator to make the setup process as frictionless as possible, but in the mean time, you can set it up like this:
 
 
+## Yeoman Installation *(recommended)*
+
+1\. Install Yeoman *(if you haven't already)*
+```bash
+npm install -g yo
+```
+
+2\. Install the project generator
+```bash
+npm install -g generator-lexxi
+```
+
+3\. Run the generator in your *(empty)* new project directory
+```bash
+yo lexxi
+```
+
+
+
 ## Manual Installation
 
 1\. Clone this repo into your (blank) project directory
