@@ -29,14 +29,14 @@ Read the full documentation here: [http://lexxi.hexgirlfriend.com](http://lexxi.
 We're working on a Yeoman generator to make the setup process as frictionless as possible, but in the mean time, you can set it up like this:
 
 
-## Yeoman Installation *(recommended)*
+## Install with [Yeoman](http://yeoman.io/) *(recommended)*
 
-1\. Install Yeoman *(if you haven't already)*
+1\. Install the Yeoman CLI *(if you haven't already)*
 ```bash
 npm install -g yo
 ```
 
-2\. Install the project generator
+2\. Install the LEXXI project generator
 ```bash
 npm install -g generator-lexxi
 ```
