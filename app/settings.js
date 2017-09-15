@@ -21,6 +21,8 @@ module.exports = {
   //   bucket: '',
   // },
 
+  // email_handlebars: true,
+
   // mailgun: {
   //   api_key: '',
   //   domain: ''

@@ -26,7 +26,7 @@ var express = require('express'),
     moment = require('moment'),
     math = require('mathjs'),
     mime = require('mime'),
-    gm = require('gm'),
+    jimp = require('jimp'),
     v = require('voca');
 
 
@@ -43,7 +43,7 @@ var $ = {
   moment: moment,
   math: math,
   mime: mime,
-  gm: gm,
+  jimp: jimp,
   v: v,
   __base: __dirname + '/',
   settings: settings,
@@ -204,9 +204,7 @@ if (settings.db || settings.production.db){
 
   mongoose = require('mongoose');
 
-  var schemas = {},
-      models = {},
-      db_options = {};
+  var db_options = {};
 
   if (app.get('env') === 'production' && settings.production.db){
     if (settings.production.db.replica_set_name){
@@ -225,6 +223,8 @@ if (settings.db || settings.production.db){
 }
 
 $.mongoose = mongoose;
+$.models = {};
+$.schemas = {};
 
 
 
@@ -292,11 +292,13 @@ if (settings.smtp || settings.production.smtp || settings.mailgun || settings.pr
     }
     mail_transport = nodemailer.createTransport(smtp_options);
   }
-  mail_transport.use('compile', hbs({
-    viewEngine: handlebars.engine,
-    viewPath: __dirname + '/app/pages',
-    extName: '.hbs'
-  }));
+  if (settings.email_handlebars){
+    mail_transport.use('compile', hbs({
+      viewEngine: handlebars.engine,
+      viewPath: __dirname + '/app/pages',
+      extName: '.hbs'
+    }));
+  }
   mail_transport.use('compile', htmlToText());
 }
 
